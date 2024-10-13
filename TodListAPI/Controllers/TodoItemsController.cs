@@ -35,8 +35,8 @@ public class TodoItemsController : ControllerBase
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetbyId), new {id = todoItem.Id}, todoItem);
     }
-    [HttpPost]
-        public IActionResult CompleteDate(int id)
+    [HttpPut]
+        public IActionResult CompleteDate(int id, TodoItem todoItem)
         {
         var todoItems = _context.TodoItems.FirstOrDefault( item => item.Id == id);
         if (todoItems == null)
@@ -47,4 +47,18 @@ public class TodoItemsController : ControllerBase
         _context.SaveChanges();
         return Ok(todoItems);
         }
+
+    [HttpDelete]
+    public IActionResult DeleteTodoItem(int id)
+    {
+        var todoItems = _context.TodoItems.FirstOrDefault( item => item.Id == id );
+        if (todoItems == null)
+        {
+            return NotFound();
+        }
+        _context.TodoItems.Remove(todoItems);
+        _context.SaveChanges();  
+        return NoContent();      
+    }
+
 }

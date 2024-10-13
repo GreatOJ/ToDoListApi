@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TodListAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+131f076c0e70ab293748772371e490479f0bd08e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db713eff9bcc48cb0bf62c897afc46afd517c792")]
 [assembly: System.Reflection.AssemblyProductAttribute("TodListAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TodListAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
